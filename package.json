@@ -1,0 +1,29 @@
+{
+  "name": "pruebaexamenvercel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "vercel-build": "node node_modules/jsdoc/jsdoc.js src/js/main.js -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranJJL05/pruebabuckets3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranJJL05/pruebabuckets3/issues"
+  },
+  "homepage": "https://github.com/FranJJL05/pruebabuckets3#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.5"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

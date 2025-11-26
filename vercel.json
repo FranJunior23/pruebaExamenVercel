@@ -1,0 +1,42 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "buildCommand": "npm run vercel-build",
+                "outputDirectory": "."
+            }
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/styles/(.*)",
+            "destination": "/docs/styles/$1"
+        },
+        {
+            "source": "/scripts/(.*)",
+            "destination": "/docs/scripts/$1"
+        },
+        {
+            "source": "/images/(.*)",
+            "destination": "/docs/images/$1"
+        },
+        {
+            "source": "/:name(.*?\\.html)",
+            "destination": "/docs/:name"
+        },
+        {
+            "source": "/docs/(.*)",
+            "destination": "/docs/$1"
+        },
+        {
+            "source": "/docs",
+            "destination": "/docs/index.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/src/$1"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reading List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>La Lista de Lectura</h1>
+        </header>
+
+        <main class="content-grid">
+            <!-- Left Column: Add Book Form -->
+            <section class="book-form-section">
+                <h2>Libro</h2>
+
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="title">Título</label>
+                        <input type="text" id="title" placeholder="Título de libro 3" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="author">Autor</label>
+                            <input type="text" id="author" placeholder="A" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Género</label>
+                            <input type="text" id="genre" placeholder="Terror" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="add-btn">Añadir Libro</button>
+                </form>
+            </section>
+
+            <!-- Right Column: Reading List -->
+            <section class="reading-list-section">
+                <h2>Mi Lista de Lectura</h2>
+
+                <div id="book-list-container" class="book-list">
+                    <!-- Books will be injected here by JS -->
+                </div>
+
+                <footer class="list-footer">
+                    <p id="books-read-count">Libros Leídos: 0 de 0</p>
+                </footer>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
